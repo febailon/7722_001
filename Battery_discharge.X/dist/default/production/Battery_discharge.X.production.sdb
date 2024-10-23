@@ -1,0 +1,662 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1829 ]
+[d frameptr 6 ]
+"37 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v _isFVReadDone isFVReadDone `(a  1 s 1 isFVReadDone ]
+"42
+[v _getVoltage getVoltage `(us  1 e 2 0 ]
+"86
+[v _blinkLED_red blinkLED_red `(v  1 e 1 0 ]
+[v i1_blinkLED_red blinkLED_red `(v  1 e 1 0 ]
+"112
+[v _blinkLED_GRN_daughterboard blinkLED_GRN_daughterboard `(v  1 e 1 0 ]
+"128
+[v _ISR ISR `II(v  1 e 1 0 ]
+"269
+[v _main main `(v  1 e 1 0 ]
+"317
+[v _initPic initPic `(v  1 e 1 0 ]
+"415
+[v _isLowBattery isLowBattery `(uc  1 e 1 0 ]
+"193 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"1001
+[v _utoa utoa `(v  1 s 1 utoa ]
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+[v i1_strcpy strcpy `(*.39uc  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+[v i1_strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"18 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\uart.c
+[v _initUart initUart `(v  1 e 1 0 ]
+"35
+[v _startUart startUart `(v  1 e 1 0 ]
+"58
+[v _writeMsg writeMsg `(v  1 e 1 0 ]
+[v i1_writeMsg writeMsg `(v  1 e 1 0 ]
+"64
+[v _writeUart writeUart `(v  1 e 1 0 ]
+[v i1_writeUart writeUart `(v  1 e 1 0 ]
+"21 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v _consecutiveLowReadings consecutiveLowReadings `uc  1 e 1 0 ]
+"22
+[v _startup_voltage startup_voltage `us  1 e 2 0 ]
+"23
+[v _TX_TEST_voltage TX_TEST_voltage `us  1 e 2 0 ]
+"24
+[v _prnBuf prnBuf `[128]uc  1 e 128 @9072 ]
+"25
+[v _rxChar rxChar `uc  1 e 1 0 ]
+"26
+[v _batt_mode batt_mode `uc  1 e 1 0 ]
+"27
+[v _discharge_EOL_Complete discharge_EOL_Complete `uc  1 e 1 0 ]
+"28
+[v _buffer_char buffer_char `[128]uc  1 e 128 @8944 ]
+"352 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16lf1829.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S162 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"375
+[s S171 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S176 . 1 `S162 1 . 1 0 `S171 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES176  1 e 1 @11 ]
+[s S240 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"598
+[u S249 . 1 `S240 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES249  1 e 1 @17 ]
+[s S403 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"849
+[s S412 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S416 . 1 `S403 1 . 1 0 `S412 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES416  1 e 1 @24 ]
+"1186
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1236
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1275
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S600 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1354
+[u S609 . 1 `S600 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES609  1 e 1 @145 ]
+"1516
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+[s S274 . 1 `uc 1 SWDTEN 1 0 :1:0 
+`uc 1 WDTPS0 1 0 :1:1 
+`uc 1 WDTPS1 1 0 :1:2 
+`uc 1 WDTPS2 1 0 :1:3 
+`uc 1 WDTPS3 1 0 :1:4 
+`uc 1 WDTPS4 1 0 :1:5 
+]
+"1669
+[s S281 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WDTPS 1 0 :5:1 
+]
+[u S284 . 1 `S274 1 . 1 0 `S281 1 . 1 0 ]
+[v _WDTCONbits WDTCONbits `VES284  1 e 1 @151 ]
+"1709
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1767
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S122 . 1 `uc 1 ADRESL 1 0 :8:0 
+]
+"1918
+[u S124 . 1 `S122 1 . 1 0 ]
+[v _ADRESLbits ADRESLbits `VES124  1 e 1 @155 ]
+[s S129 . 1 `uc 1 ADRESH 1 0 :8:0 
+]
+"1938
+[u S131 . 1 `S129 1 . 1 0 ]
+[v _ADRESHbits ADRESHbits `VES131  1 e 1 @156 ]
+[s S22 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"1973
+[s S30 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S34 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S37 . 1 `S22 1 . 1 0 `S30 1 . 1 0 `S34 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES37  1 e 1 @157 ]
+"2028
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+[s S85 . 1 `uc 1 ADPREF0 1 0 :1:0 
+`uc 1 ADPREF1 1 0 :1:1 
+`uc 1 ADNREF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCS0 1 0 :1:4 
+`uc 1 ADCS1 1 0 :1:5 
+`uc 1 ADCS2 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2050
+[s S94 . 1 `uc 1 ADPREF 1 0 :2:0 
+`uc 1 . 1 0 :2:2 
+`uc 1 ADCS 1 0 :3:4 
+]
+[u S98 . 1 `S85 1 . 1 0 `S94 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES98  1 e 1 @158 ]
+"2100
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2145
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2184
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S57 . 1 `uc 1 ADFVR0 1 0 :1:0 
+`uc 1 ADFVR1 1 0 :1:1 
+`uc 1 CDAFVR0 1 0 :1:2 
+`uc 1 CDAFVR1 1 0 :1:3 
+`uc 1 TSRNG 1 0 :1:4 
+`uc 1 TSEN 1 0 :1:5 
+`uc 1 FVRRDY 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"2566
+[s S66 . 1 `uc 1 ADFVR 1 0 :2:0 
+`uc 1 CDAFVR 1 0 :2:2 
+]
+[u S69 . 1 `S57 1 . 1 0 `S66 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES69  1 e 1 @279 ]
+"2867
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
+"2951
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2998
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3034
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3287
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3307
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3339
+[v _SPBRG SPBRG `VEuc  1 e 1 @411 ]
+"3602
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3660
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3708
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+[s S337 . 1 `uc 1 IOCAP0 1 0 :1:0 
+`uc 1 IOCAP1 1 0 :1:1 
+`uc 1 IOCAP2 1 0 :1:2 
+`uc 1 IOCAP3 1 0 :1:3 
+`uc 1 IOCAP4 1 0 :1:4 
+`uc 1 IOCAP5 1 0 :1:5 
+]
+"6012
+[s S344 . 1 `uc 1 IOCAP 1 0 :6:0 
+]
+[u S346 . 1 `S337 1 . 1 0 `S344 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES346  1 e 1 @913 ]
+[s S315 . 1 `uc 1 IOCAN0 1 0 :1:0 
+`uc 1 IOCAN1 1 0 :1:1 
+`uc 1 IOCAN2 1 0 :1:2 
+`uc 1 IOCAN3 1 0 :1:3 
+`uc 1 IOCAN4 1 0 :1:4 
+`uc 1 IOCAN5 1 0 :1:5 
+]
+"6070
+[s S322 . 1 `uc 1 IOCAN 1 0 :6:0 
+]
+[u S324 . 1 `S315 1 . 1 0 `S322 1 . 1 0 ]
+[v _IOCANbits IOCANbits `VES324  1 e 1 @914 ]
+[s S140 . 1 `uc 1 IOCAF0 1 0 :1:0 
+`uc 1 IOCAF1 1 0 :1:1 
+`uc 1 IOCAF2 1 0 :1:2 
+`uc 1 IOCAF3 1 0 :1:3 
+`uc 1 IOCAF4 1 0 :1:4 
+`uc 1 IOCAF5 1 0 :1:5 
+]
+"6128
+[s S147 . 1 `uc 1 IOCAF 1 0 :6:0 
+]
+[u S149 . 1 `S140 1 . 1 0 `S147 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES149  1 e 1 @915 ]
+[s S381 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBP4 1 0 :1:4 
+`uc 1 IOCBP5 1 0 :1:5 
+`uc 1 IOCBP6 1 0 :1:6 
+`uc 1 IOCBP7 1 0 :1:7 
+]
+"6186
+[s S387 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBP 1 0 :4:4 
+]
+[u S390 . 1 `S381 1 . 1 0 `S387 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES390  1 e 1 @916 ]
+[s S359 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBN4 1 0 :1:4 
+`uc 1 IOCBN5 1 0 :1:5 
+`uc 1 IOCBN6 1 0 :1:6 
+`uc 1 IOCBN7 1 0 :1:7 
+]
+"6234
+[s S365 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBN 1 0 :4:4 
+]
+[u S368 . 1 `S359 1 . 1 0 `S365 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES368  1 e 1 @917 ]
+[s S212 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBF4 1 0 :1:4 
+`uc 1 IOCBF5 1 0 :1:5 
+`uc 1 IOCBF6 1 0 :1:6 
+`uc 1 IOCBF7 1 0 :1:7 
+]
+"6282
+[s S218 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IOCBF 1 0 :4:4 
+]
+[u S221 . 1 `S212 1 . 1 0 `S218 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES221  1 e 1 @918 ]
+"7185
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"7188
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"7497
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"8064
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"8070
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"8073
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
+"8082
+[v _RC3 RC3 `VEb  1 e 0 @115 ]
+"8091
+[v _RC6 RC6 `VEb  1 e 0 @118 ]
+"8136
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"8247
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"8460
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"8463
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"8472
+[v _TRMT TRMT `VEb  1 e 0 @3313 ]
+"8508
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"153 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"269 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v _main main `(v  1 e 1 0 ]
+{
+"305
+} 0
+"58 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\uart.c
+[v _writeMsg writeMsg `(v  1 e 1 0 ]
+{
+"60
+[v writeMsg@i i `uc  1 a 1 8 ]
+"58
+[v writeMsg@msg msg `*.39uc  1 p 2 4 ]
+[v writeMsg@len len `uc  1 p 1 6 ]
+"62
+} 0
+"64
+[v _writeUart writeUart `(v  1 e 1 0 ]
+{
+[v writeUart@data data `uc  1 a 1 wreg ]
+[v writeUart@data data `uc  1 a 1 wreg ]
+"66
+[v writeUart@data data `uc  1 a 1 0 ]
+"68
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.39DCuc  1 a 2 2 ]
+"5
+[v strlen@s s `*.39DCuc  1 p 2 0 ]
+"12
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"5
+[v strcpy@d d `*.39uc  1 a 2 8 ]
+"3
+[v strcpy@dest dest `*.39uc  1 p 2 0 ]
+[v strcpy@src src `*.25DCuc  1 p 2 2 ]
+"8
+} 0
+"35 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\uart.c
+[v _startUart startUart `(v  1 e 1 0 ]
+{
+"46
+} 0
+"18
+[v _initUart initUart `(v  1 e 1 0 ]
+{
+"33
+} 0
+"317 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v _initPic initPic `(v  1 e 1 0 ]
+{
+"383
+} 0
+"86
+[v _blinkLED_red blinkLED_red `(v  1 e 1 0 ]
+{
+[v blinkLED_red@ticks ticks `uc  1 a 1 wreg ]
+"88
+[v blinkLED_red@i i `uc  1 a 1 3 ]
+"86
+[v blinkLED_red@ticks ticks `uc  1 a 1 wreg ]
+"88
+[v blinkLED_red@ticks ticks `uc  1 a 1 2 ]
+"97
+} 0
+"112
+[v _blinkLED_GRN_daughterboard blinkLED_GRN_daughterboard `(v  1 e 1 0 ]
+{
+[v blinkLED_GRN_daughterboard@ticks ticks `uc  1 a 1 wreg ]
+"114
+[v blinkLED_GRN_daughterboard@i i `uc  1 a 1 3 ]
+"112
+[v blinkLED_GRN_daughterboard@ticks ticks `uc  1 a 1 wreg ]
+"114
+[v blinkLED_GRN_daughterboard@ticks ticks `uc  1 a 1 2 ]
+"123
+} 0
+"128
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"263
+} 0
+"58 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\uart.c
+[v i1_writeMsg writeMsg `(v  1 e 1 0 ]
+{
+"60
+[v i1writeMsg@i i `uc  1 a 1 8 ]
+"58
+[v i1writeMsg@msg msg `*.39uc  1 p 2 4 ]
+[v i1writeMsg@len len `uc  1 p 1 6 ]
+"62
+} 0
+"64
+[v i1_writeUart writeUart `(v  1 e 1 0 ]
+{
+[v i1writeUart@data data `uc  1 a 1 wreg ]
+[v i1writeUart@data data `uc  1 a 1 wreg ]
+"66
+[v i1writeUart@data data `uc  1 a 1 0 ]
+"68
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+[v i1_strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v i1strlen@a a `*.39DCuc  1 a 2 2 ]
+"5
+[v i1strlen@s s `*.39DCuc  1 p 2 0 ]
+"12
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c
+[v i1_strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"5
+[v i1strcpy@d d `*.39uc  1 a 2 8 ]
+"3
+[v i1strcpy@dest dest `*.39uc  1 p 2 0 ]
+[v i1strcpy@src src `*.25DCuc  1 p 2 2 ]
+"8
+} 0
+"86 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v i1_blinkLED_red blinkLED_red `(v  1 e 1 0 ]
+{
+[v i1blinkLED_red@ticks ticks `uc  1 a 1 wreg ]
+"88
+[v i1blinkLED_red@i i `uc  1 a 1 3 ]
+"86
+[v i1blinkLED_red@ticks ticks `uc  1 a 1 wreg ]
+"88
+[v i1blinkLED_red@ticks ticks `uc  1 a 1 2 ]
+"97
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S1109 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+"13
+[s S1112 _IO_FILE 11 `S1109 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1112  1 a 11 51 ]
+"12
+[v sprintf@ap ap `[1]*.4v  1 a 1 50 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 44 ]
+[v sprintf@fmt fmt `*.25DCuc  1 p 2 46 ]
+"23
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 42 ]
+[s S1144 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.39S1144  1 p 2 36 ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 38 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 40 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S1163 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1163  1 a 4 29 ]
+"1179
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 34 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 33 ]
+[s S1144 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.39S1144  1 p 2 21 ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 23 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 24 ]
+"1814
+} 0
+"1001
+[v _utoa utoa `(v  1 s 1 utoa ]
+{
+"1003
+[v utoa@i i `i  1 a 2 19 ]
+[v utoa@w w `i  1 a 2 17 ]
+"1007
+[v utoa@p p `a  1 a 1 16 ]
+[s S1144 _IO_FILE 0 ]
+"1001
+[v utoa@fp fp `*.39S1144  1 p 2 11 ]
+[v utoa@d d `ui  1 p 2 13 ]
+"1047
+} 0
+"193
+[v _pad pad `(v  1 s 1 pad ]
+{
+"195
+[v pad@i i `i  1 a 2 9 ]
+[s S1144 _IO_FILE 0 ]
+"193
+[v pad@fp fp `*.39S1144  1 p 2 4 ]
+[v pad@buf buf `*.4uc  1 p 1 6 ]
+[v pad@p p `i  1 p 2 7 ]
+"226
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.4DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 1 ]
+"10
+[v fputs@c c `uc  1 a 1 0 ]
+"8
+[v fputs@s s `*.4DCuc  1 a 1 wreg ]
+[u S1109 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+[s S1112 _IO_FILE 11 `S1109 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S1112  1 p 2 9 ]
+"13
+[v fputs@s s `*.4DCuc  1 a 1 3 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S1109 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+[s S1112 _IO_FILE 11 `S1109 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S1112  1 p 2 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"1158 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 wreg ]
+"1164
+[v read_prec_or_width@c c `uc  1 a 1 0 ]
+"1159
+[v read_prec_or_width@n n `i  1 a 2 1 ]
+"1158
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 wreg ]
+[v read_prec_or_width@ap ap `*.4[1]*.4v  1 p 1 6 ]
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 3 ]
+"1171
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"42 C:\Users\Dick\Desktop\Battery_discharge_automatization\Battery_discharge.X\battery_discharge.c
+[v _getVoltage getVoltage `(us  1 e 2 0 ]
+{
+"45
+[v getVoltage@voltage voltage `us  1 a 2 7 ]
+"44
+[v getVoltage@hi hi `uc  1 a 1 10 ]
+[v getVoltage@lo lo `uc  1 a 1 9 ]
+"78
+} 0
+"37
+[v _isFVReadDone isFVReadDone `(a  1 s 1 isFVReadDone ]
+{
+"40
+} 0
